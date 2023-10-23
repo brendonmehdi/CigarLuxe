@@ -15,6 +15,8 @@
         <entry key="app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.2575" />
         <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.2575" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.5765398550724637" />
+        <entry key="app/src/main/res/layout/fragment_tutorial.xml" value="0.43385416666666665" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.43385416666666665" />
         <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.5911458333333334" />
         <entry key="app/src/main/res/menu/main.xml" value="0.34375" />
       </map>
