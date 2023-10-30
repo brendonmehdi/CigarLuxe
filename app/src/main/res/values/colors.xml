@@ -7,9 +7,13 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="slateGray">#7286A0</color>
-    <color name="gray">#7C7C7C</color>
-    <color name="beige">#EFECCA</color>
-    <color name="Black">#000000</color>
-    <color name="darkOrange">#F98F24</color>
+    <color name="cigarBrown">#5D4037</color> <!-- Dark Brown -->
+    <color name="cigarAmber">#FFC107</color> <!-- Amber -->
+    <color name="cigarCream">#FFF8E1</color> <!-- Cream -->
+    <color name="cigarGreen">#4CAF50</color> <!-- Green -->
+    <color name="cigarGold">#FFD700</color> <!-- Gold -->
+    <color name="cigarBlack">#000000</color> <!-- Black -->
+    <color name="cigarWhite">#FFFFFF</color> <!-- White -->
+    <color name="cigarGray">#757575</color> <!-- Gray -->
+    <color name="cigarAccent">#FF5722</color> <!-- Accent Color -->
 </resources>
