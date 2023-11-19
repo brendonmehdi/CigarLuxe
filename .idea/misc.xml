@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/a313m/OneDrive/Desktop/CigarLuxe/App/app/src/main/res/layout/child_rv_layout.xml" value="0.55" />
+        <entry key="..\:/Users/a313m/OneDrive/Desktop/CigarLuxe/App/app/src/main/res/layout/fragment_list.xml" value="0.55" />
+        <entry key="..\:/Users/a313m/OneDrive/Desktop/CigarLuxe/App/app/src/main/res/layout/parent_rv_layout.xml" value="0.55" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2575" />
         <entry key="app/src/main/res/drawable/dice.xml" value="0.2575" />
         <entry key="app/src/main/res/drawable/gradient1.xml" value="0.1" />
@@ -17,10 +20,14 @@
         <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.2575" />
         <entry key="app/src/main/res/drawable/snow.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.43385416666666665" />
+        <entry key="app/src/main/res/layout/child_rv_layout.xml" value="0.35643115942028986" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.5765398550724637" />
-        <entry key="app/src/main/res/layout/fragment_list.xml" value="0.22685185185185186" />
+        <entry key="app/src/main/res/layout/fragment_list.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_picker.xml" value="0.35643115942028986" />
         <entry key="app/src/main/res/layout/fragment_tutorial.xml" value="0.43385416666666665" />
+        <entry key="app/src/main/res/layout/lv_layout.xml" value="0.35643115942028986" />
         <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.43385416666666665" />
+        <entry key="app/src/main/res/layout/parent_rv_layout.xml" value="0.35643115942028986" />
         <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.5911458333333334" />
         <entry key="app/src/main/res/menu/main.xml" value="0.34375" />
       </map>
