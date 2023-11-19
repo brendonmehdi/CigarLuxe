@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -16,6 +17,7 @@ import com.example.cigarluxe.model.CategoryItem;
 
 
 import java.util.List;
+import java.util.Objects;
 
 public class CategoryItemRecyclerAdapter extends RecyclerView.Adapter<CategoryItemRecyclerAdapter.CategoryItemViewHolder> {
 
@@ -42,6 +44,47 @@ public class CategoryItemRecyclerAdapter extends RecyclerView.Adapter<CategoryIt
             holder.infoList.setAdapter(categoryItemList.get(position).getInfoAdapters());
 
             //next step is to make the images change based on the click of the listview
+        //so what i have to do is create multiple adapters for each section of the recycler view. that way i can make the list views in each parent reccycler show different images
+        //below is an on click listener that controls which img is being displayed
+        //the holder.getadapterpostion gets hold of each card in the recyclerview in other words each item in the nested rv
+        if (holder.getAdapterPosition() == 0) {
+            holder.infoList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    switch (position) {
+                        case 0:
+                            holder.infoImage.setImageResource(R.drawable.dice);
+                            break;
+                        case 1:
+                            holder.infoImage.setImageResource(R.drawable.cigars);
+                            break;
+                        default:
+                            holder.infoImage.setImageResource(R.drawable.cohiba);
+                            break;
+                    }
+
+                }
+            });
+        }else if(holder.getAdapterPosition() == 1){
+            holder.infoList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    switch (position) {
+                        case 0:
+                            holder.infoImage.setImageResource(R.drawable.ic_baseline_home_24);
+                            break;
+                        case 1:
+                            holder.infoImage.setImageResource(R.drawable.giphy);
+                            break;
+                        default:
+                            holder.infoImage.setImageResource(R.drawable.cohiba);
+                            break;
+                    }
+
+                }
+            });
+        }
+
     }
 
     @Override
