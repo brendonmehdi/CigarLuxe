@@ -47,6 +47,11 @@ public class CategoryItemRecyclerAdapter extends RecyclerView.Adapter<CategoryIt
         //so what i have to do is create multiple adapters for each section of the recycler view. that way i can make the list views in each parent reccycler show different images
         //below is an on click listener that controls which img is being displayed
         //the holder.getadapterpostion gets hold of each card in the recyclerview in other words each item in the nested rv
+
+
+
+        //note that in order to switch which parent rv you want to select use and if statement on the int position see if its == to 0 and so on for as many AllCategory items you add in the ListFragment class
+        //example if(position == 0){code here} // this would select the first item in the parent recycler in this case containing our cuban cigar information
         if (holder.getAdapterPosition() == 0) {
             holder.infoList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
