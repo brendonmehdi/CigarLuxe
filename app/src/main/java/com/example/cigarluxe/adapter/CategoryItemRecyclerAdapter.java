@@ -12,7 +12,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.cigarluxe.ListFragment;
 import com.example.cigarluxe.R;
+import com.example.cigarluxe.model.AllCategory;
 import com.example.cigarluxe.model.CategoryItem;
 
 
@@ -52,45 +54,87 @@ public class CategoryItemRecyclerAdapter extends RecyclerView.Adapter<CategoryIt
 
         //note that in order to switch which parent rv you want to select use and if statement on the int position see if its == to 0 and so on for as many AllCategory items you add in the ListFragment class
         //example if(position == 0){code here} // this would select the first item in the parent recycler in this case containing our cuban cigar information
-        if (holder.getAdapterPosition() == 0) {
-            holder.infoList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    switch (position) {
-                        case 0:
-                            holder.infoImage.setImageResource(R.drawable.dice);
-                            break;
-                        case 1:
-                            holder.infoImage.setImageResource(R.drawable.cigars);
-                            break;
-                        default:
-                            holder.infoImage.setImageResource(R.drawable.cohiba);
-                            break;
-                    }
 
-                }
-            });
-        }else if(holder.getAdapterPosition() == 1){
-            holder.infoList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    switch (position) {
-                        case 0:
-                            holder.infoImage.setImageResource(R.drawable.ic_baseline_home_24);
-                            break;
-                        case 1:
-                            holder.infoImage.setImageResource(R.drawable.giphy);
-                            break;
-                        default:
-                            holder.infoImage.setImageResource(R.drawable.cohiba);
-                            break;
-                    }
+        if (categoryItemList.get(0).getItemId() == 1) {
+            if (holder.getAdapterPosition() == 0) {
+                holder.infoList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        switch (position) {
+                            case 0:
+                                holder.infoImage.setImageResource(R.drawable.aboutcohiba);
+                                break;
+                            case 1:
+                                holder.infoImage.setImageResource(R.drawable.cigars);
+                                break;
+                            default:
+                                holder.infoImage.setImageResource(R.drawable.cohiba);
+                                break;
+                        }
 
-                }
-            });
+                    }
+                });
+            } else if (holder.getAdapterPosition() == 1) {
+                holder.infoList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        switch (position) {
+                            case 0:
+                                holder.infoImage.setImageResource(R.drawable.aboutmonte);
+                                break;
+                            case 1:
+                                holder.infoImage.setImageResource(R.drawable.giphy);
+                                break;
+                            default:
+                                holder.infoImage.setImageResource(R.drawable.cohiba);
+                                break;
+                        }
+
+                    }
+                });
+            }
+        }else if (categoryItemList.get(0).getItemId() == 2){
+            if (holder.getAdapterPosition() == 0) {
+                holder.infoList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        switch (position) {
+                            case 0:
+                                holder.infoImage.setImageResource(R.drawable.ic_baseline_home_24);
+                                break;
+                            case 1:
+                                holder.infoImage.setImageResource(R.drawable.cigars);
+                                break;
+                            default:
+                                holder.infoImage.setImageResource(R.drawable.cohiba);
+                                break;
+                        }
+
+                    }
+                });
+            } else if (holder.getAdapterPosition() == 1) {
+                holder.infoList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        switch (position) {
+                            case 0:
+                                holder.infoImage.setImageResource(R.drawable.ic_baseline_format_list_numbered_24);
+                                break;
+                            case 1:
+                                holder.infoImage.setImageResource(R.drawable.giphy);
+                                break;
+                            default:
+                                holder.infoImage.setImageResource(R.drawable.cohiba);
+                                break;
+                        }
+
+                    }
+                });
+            }
         }
 
     }
+
 
     @Override
     public int getItemCount() {

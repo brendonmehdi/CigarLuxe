@@ -66,13 +66,12 @@
 
             <ImageView
                 android:id="@+id/info_image"
-                android:layout_width="294dp"
-                android:layout_height="205dp"
-                android:layout_marginBottom="28dp"
+                android:layout_width="372dp"
+                android:layout_height="258dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+                tools:srcCompat="@drawable/aboutmonte" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

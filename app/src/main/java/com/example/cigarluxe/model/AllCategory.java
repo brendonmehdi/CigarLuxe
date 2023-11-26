@@ -20,9 +20,7 @@ public class AllCategory {
         this.categoryItemList = categoryItemList;
     }
 
-    public String getCategoryTitle() {
-        return categoryTitle;
-    }
+    public String getCategoryTitle() {return categoryTitle;}
 
     public void setCategoryTitle(String categoryTitle) {
         this.categoryTitle = categoryTitle;
