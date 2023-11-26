@@ -63,7 +63,7 @@ public class CategoryItemRecyclerAdapter extends RecyclerView.Adapter<CategoryIt
                                 holder.infoImage.setImageResource(R.drawable.aboutcohiba);
                                 break;
                             case 1:
-                                holder.infoImage.setImageResource(R.drawable.cohibastrength);
+                                holder.infoImage.setImageResource(R.drawable.strength3);
                                 break;
                             default:
                                 holder.infoImage.setImageResource(R.drawable.money4);
@@ -82,7 +82,7 @@ public class CategoryItemRecyclerAdapter extends RecyclerView.Adapter<CategoryIt
                                 holder.infoImage.setImageResource(R.drawable.aboutmonte);
                                 break;
                             case 1:
-                                holder.infoImage.setImageResource(R.drawable.giphy);
+                                holder.infoImage.setImageResource(R.drawable.strength2);
                                 break;
                             default:
                                 holder.infoImage.setImageResource(R.drawable.money3);
@@ -101,7 +101,7 @@ public class CategoryItemRecyclerAdapter extends RecyclerView.Adapter<CategoryIt
                                 holder.infoImage.setImageResource(R.drawable.aboutbolivar);
                                 break;
                             case 1:
-                                holder.infoImage.setImageResource(R.drawable.giphy);
+                                holder.infoImage.setImageResource(R.drawable.strength4);
                                 break;
                             default:
                                 holder.infoImage.setImageResource(R.drawable.money2);
@@ -111,6 +111,43 @@ public class CategoryItemRecyclerAdapter extends RecyclerView.Adapter<CategoryIt
                     }
                 });
                 //card 4
+            }else if (holder.getAdapterPosition() == 3){
+                holder.infoList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        switch (position) {
+                            case 0:
+                                holder.infoImage.setImageResource(R.drawable.aboutpartagas);
+                                break;
+                            case 1:
+                                holder.infoImage.setImageResource(R.drawable.strength3);
+                                break;
+                            default:
+                                holder.infoImage.setImageResource(R.drawable.money2);
+                                break;
+                        }
+
+                    }
+                });
+                //card 5
+            }else if (holder.getAdapterPosition() == 4){
+                holder.infoList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        switch (position) {
+                            case 0:
+                                holder.infoImage.setImageResource(R.drawable.aboutupman);
+                                break;
+                            case 1:
+                                holder.infoImage.setImageResource(R.drawable.strength2);
+                                break;
+                            default:
+                                holder.infoImage.setImageResource(R.drawable.money2);
+                                break;
+                        }
+
+                    }
+                });
             }
             //below for recycler 2
         }else if (categoryItemList.get(0).getItemId() == 2){
@@ -121,13 +158,13 @@ public class CategoryItemRecyclerAdapter extends RecyclerView.Adapter<CategoryIt
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         switch (position) {
                             case 0:
-                                holder.infoImage.setImageResource(R.drawable.ic_baseline_home_24);
+                                holder.infoImage.setImageResource(R.drawable.aboutopus);
                                 break;
                             case 1:
-                                holder.infoImage.setImageResource(R.drawable.cigars);
+                                holder.infoImage.setImageResource(R.drawable.strength3);
                                 break;
                             default:
-                                holder.infoImage.setImageResource(R.drawable.cohiba);
+                                holder.infoImage.setImageResource(R.drawable.money4);
                                 break;
                         }
 
@@ -140,19 +177,172 @@ public class CategoryItemRecyclerAdapter extends RecyclerView.Adapter<CategoryIt
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         switch (position) {
                             case 0:
-                                holder.infoImage.setImageResource(R.drawable.ic_baseline_format_list_numbered_24);
+                                holder.infoImage.setImageResource(R.drawable.aboutdavidoff);
                                 break;
                             case 1:
-                                holder.infoImage.setImageResource(R.drawable.giphy);
+                                holder.infoImage.setImageResource(R.drawable.strength3);
                                 break;
                             default:
-                                holder.infoImage.setImageResource(R.drawable.cohiba);
+                                holder.infoImage.setImageResource(R.drawable.money4);
                                 break;
                         }
 
                     }
                 });
                 //card 3
+            }else if (holder.getAdapterPosition() == 2){
+                holder.infoList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        switch (position) {
+                            case 0:
+                                holder.infoImage.setImageResource(R.drawable.aboutflor);
+                                break;
+                            case 1:
+                                holder.infoImage.setImageResource(R.drawable.strength4);
+                                break;
+                            default:
+                                holder.infoImage.setImageResource(R.drawable.money3);
+                                break;
+                        }
+
+                    }
+                });
+                //card 4
+            }else if (holder.getAdapterPosition() == 3){
+                holder.infoList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        switch (position) {
+                            case 0:
+                                holder.infoImage.setImageResource(R.drawable.aboutashton);
+                                break;
+                            case 1:
+                                holder.infoImage.setImageResource(R.drawable.strength4);
+                                break;
+                            default:
+                                holder.infoImage.setImageResource(R.drawable.money3);
+                                break;
+                        }
+
+                    }
+                });
+                //card 5
+            }else if (holder.getAdapterPosition() == 4){
+                holder.infoList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        switch (position) {
+                            case 0:
+                                holder.infoImage.setImageResource(R.drawable.aboutromeo);
+                                break;
+                            case 1:
+                                holder.infoImage.setImageResource(R.drawable.strength3);
+                                break;
+                            default:
+                                holder.infoImage.setImageResource(R.drawable.money3);
+                                break;
+                        }
+
+                    }
+                });
+            }
+        }else if (categoryItemList.get(0).getItemId() == 3){
+            //card 1
+            if (holder.getAdapterPosition() == 0) {
+                holder.infoList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        switch (position) {
+                            case 0:
+                                holder.infoImage.setImageResource(R.drawable.aboutcao);
+                                break;
+                            case 1:
+                                holder.infoImage.setImageResource(R.drawable.strength3);
+                                break;
+                            default:
+                                holder.infoImage.setImageResource(R.drawable.money3);
+                                break;
+                        }
+
+                    }
+                });
+                //card 2
+            } else if (holder.getAdapterPosition() == 1) {
+                holder.infoList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        switch (position) {
+                            case 0:
+                                holder.infoImage.setImageResource(R.drawable.aboutalec);
+                                break;
+                            case 1:
+                                holder.infoImage.setImageResource(R.drawable.strength3);
+                                break;
+                            default:
+                                holder.infoImage.setImageResource(R.drawable.money3);
+                                break;
+                        }
+
+                    }
+                });
+                //card 3
+            }else if (holder.getAdapterPosition() == 2){
+                holder.infoList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        switch (position) {
+                            case 0:
+                                holder.infoImage.setImageResource(R.drawable.aboutvilliger);
+                                break;
+                            case 1:
+                                holder.infoImage.setImageResource(R.drawable.strength3);
+                                break;
+                            default:
+                                holder.infoImage.setImageResource(R.drawable.money3);
+                                break;
+                        }
+
+                    }
+                });
+                //card 4
+            }else if (holder.getAdapterPosition() == 3){
+                holder.infoList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        switch (position) {
+                            case 0:
+                                holder.infoImage.setImageResource(R.drawable.aboutkristoff);
+                                break;
+                            case 1:
+                                holder.infoImage.setImageResource(R.drawable.strength3);
+                                break;
+                            default:
+                                holder.infoImage.setImageResource(R.drawable.money3);
+                                break;
+                        }
+
+                    }
+                });
+                //card 5
+            }else if (holder.getAdapterPosition() == 4){
+                holder.infoList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        switch (position) {
+                            case 0:
+                                holder.infoImage.setImageResource(R.drawable.aboutnub);
+                                break;
+                            case 1:
+                                holder.infoImage.setImageResource(R.drawable.strength3);
+                                break;
+                            default:
+                                holder.infoImage.setImageResource(R.drawable.money3);
+                                break;
+                        }
+
+                    }
+                });
             }
         }
 

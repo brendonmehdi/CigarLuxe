@@ -107,47 +107,31 @@ public class ListFragment extends Fragment {
         categoryItemList.add(new CategoryItem(1, R.drawable.cohiba, R.drawable.aboutcohiba, "Cohiba", adapter1));
         categoryItemList.add(new CategoryItem(1, R.drawable.monte, R.drawable.aboutmonte, "Montecristo", adapter1));
         categoryItemList.add(new CategoryItem(1, R.drawable.bolivar, R.drawable.aboutbolivar, "Bolivar", adapter1));
-        categoryItemList.add(new CategoryItem(1, R.drawable.partagas, R.drawable.cigars, "Partagás", adapter1));
-        categoryItemList.add(new CategoryItem(1, R.drawable.upman, R.drawable.cigars, "H. Upmann", adapter1));
+        categoryItemList.add(new CategoryItem(1, R.drawable.partagas, R.drawable.aboutpartagas, "Partagás", adapter1));
+        categoryItemList.add(new CategoryItem(1, R.drawable.upman, R.drawable.aboutupman, "H. Upmann", adapter1));
 
 // Added in second category
         List<CategoryItem> categoryItemList2 = new ArrayList<>();
-        categoryItemList2.add(new CategoryItem(2, R.drawable.cigars, R.drawable.cigars, "Opus X", adapter2));
-        categoryItemList2.add(new CategoryItem(2, R.drawable.cigars, R.drawable.cigars, "Millennium", adapter2));
-        categoryItemList2.add(new CategoryItem(2, R.drawable.cigars, R.drawable.cigars, "Ligero", adapter2));
-        categoryItemList2.add(new CategoryItem(2, R.drawable.cigars, R.drawable.cigars, "Ashton", adapter2));
-        categoryItemList2.add(new CategoryItem(2, R.drawable.cigars, R.drawable.cigars, "Romeo", adapter2));
+        categoryItemList2.add(new CategoryItem(2, R.drawable.opus, R.drawable.aboutopus, "Opus X", adapter2));
+        categoryItemList2.add(new CategoryItem(2, R.drawable.davidoff, R.drawable.aboutdavidoff, "Millennium", adapter2));
+        categoryItemList2.add(new CategoryItem(2, R.drawable.ligero, R.drawable.aboutflor, "Ligero", adapter2));
+        categoryItemList2.add(new CategoryItem(2, R.drawable.ashton, R.drawable.aboutashton, "Ashton", adapter2));
+        categoryItemList2.add(new CategoryItem(2, R.drawable.romeo, R.drawable.aboutromeo, "Romeo", adapter2));
 
 // Added in third category
         List<CategoryItem> categoryItemList3 = new ArrayList<>();
-        categoryItemList3.add(new CategoryItem(3, R.drawable.cigars, R.drawable.cigars, "Punch", adapter3));
-        categoryItemList3.add(new CategoryItem(3, R.drawable.cigars, R.drawable.cigars, "Alec", adapter3));
-        categoryItemList3.add(new CategoryItem(3, R.drawable.cigars, R.drawable.cigars, "Rocky", adapter3));
-        categoryItemList3.add(new CategoryItem(3, R.drawable.cigars, R.drawable.cigars, "Camacho", adapter3));
-        categoryItemList3.add(new CategoryItem(3, R.drawable.cigars, R.drawable.cigars, "Hoyo", adapter3));
+        categoryItemList3.add(new CategoryItem(3, R.drawable.cao, R.drawable.aboutcao, "CAO", adapter3));
+        categoryItemList3.add(new CategoryItem(3, R.drawable.alec, R.drawable.aboutalec, "Bradley", adapter3));
+        categoryItemList3.add(new CategoryItem(3, R.drawable.villiger, R.drawable.aboutvilliger, "Villiger", adapter3));
+        categoryItemList3.add(new CategoryItem(3, R.drawable.kristoff, R.drawable.aboutkristoff, "Kristoff", adapter3));
+        categoryItemList3.add(new CategoryItem(3, R.drawable.nub, R.drawable.aboutnub, "Nub", adapter3));
 
-// Added in fourth category
-        List<CategoryItem> categoryItemList4 = new ArrayList<>();
-        categoryItemList4.add(new CategoryItem(4, R.drawable.cigars, R.drawable.cigars, "CAO", adapter4));
-        categoryItemList4.add(new CategoryItem(4, R.drawable.cigars, R.drawable.cigars, "Bradley", adapter4));
-        categoryItemList4.add(new CategoryItem(4, R.drawable.cigars, R.drawable.cigars, "Villiger", adapter4));
-        categoryItemList4.add(new CategoryItem(4, R.drawable.cigars, R.drawable.cigars, "Kristoff", adapter4));
-        categoryItemList4.add(new CategoryItem(4, R.drawable.cigars, R.drawable.cigars, "Nub", adapter4));
 
-// Added in fifth category
-        List<CategoryItem> categoryItemList5 = new ArrayList<>();
-        categoryItemList5.add(new CategoryItem(5, R.drawable.cigars, R.drawable.cigars, "Fuente", adapter5));
-        categoryItemList5.add(new CategoryItem(5, R.drawable.cigars, R.drawable.cigars, "Aurora", adapter5));
-        categoryItemList5.add(new CategoryItem(5, R.drawable.cigars, R.drawable.cigars, "Ashton", adapter5));
-        categoryItemList5.add(new CategoryItem(5, R.drawable.cigars, R.drawable.cigars, "San", adapter5));
-        categoryItemList5.add(new CategoryItem(5, R.drawable.cigars, R.drawable.cigars, "Lost Art", adapter5));
 
         List<AllCategory> allCategoryList = new ArrayList<>();
         allCategoryList.add(new AllCategory("Cuban", categoryItemList));
         allCategoryList.add(new AllCategory("Dominican", categoryItemList2));
-        allCategoryList.add(new AllCategory("Honduran", categoryItemList3));
-        allCategoryList.add(new AllCategory("Brazilian", categoryItemList4));
-        allCategoryList.add(new AllCategory("Cameroon", categoryItemList5));
+        allCategoryList.add(new AllCategory("Brazilian", categoryItemList3));
 
 
 
