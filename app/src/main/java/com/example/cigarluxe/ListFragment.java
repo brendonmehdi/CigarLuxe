@@ -106,7 +106,7 @@ public class ListFragment extends Fragment {
         List<CategoryItem> categoryItemList = new ArrayList<>();
         categoryItemList.add(new CategoryItem(1, R.drawable.cohiba, R.drawable.aboutcohiba, "Cohiba", adapter1));
         categoryItemList.add(new CategoryItem(1, R.drawable.monte, R.drawable.aboutmonte, "Montecristo", adapter1));
-        categoryItemList.add(new CategoryItem(1, R.drawable.bolivar, R.drawable.cigars, "Bolivar", adapter1));
+        categoryItemList.add(new CategoryItem(1, R.drawable.bolivar, R.drawable.aboutbolivar, "Bolivar", adapter1));
         categoryItemList.add(new CategoryItem(1, R.drawable.partagas, R.drawable.cigars, "Partagás", adapter1));
         categoryItemList.add(new CategoryItem(1, R.drawable.upman, R.drawable.cigars, "H. Upmann", adapter1));
 

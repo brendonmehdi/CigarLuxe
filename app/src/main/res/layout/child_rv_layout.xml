@@ -64,7 +64,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/item_image" />
 
-            <ImageView
+            <pl.droidsonroids.gif.GifImageView
                 android:id="@+id/info_image"
                 android:layout_width="372dp"
                 android:layout_height="258dp"

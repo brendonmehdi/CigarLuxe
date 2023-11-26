@@ -12,14 +12,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.cigarluxe.ListFragment;
 import com.example.cigarluxe.R;
-import com.example.cigarluxe.model.AllCategory;
 import com.example.cigarluxe.model.CategoryItem;
 
 
 import java.util.List;
-import java.util.Objects;
 
 public class CategoryItemRecyclerAdapter extends RecyclerView.Adapter<CategoryItemRecyclerAdapter.CategoryItemViewHolder> {
 
@@ -54,8 +51,9 @@ public class CategoryItemRecyclerAdapter extends RecyclerView.Adapter<CategoryIt
 
         //note that in order to switch which parent rv you want to select use and if statement on the int position see if its == to 0 and so on for as many AllCategory items you add in the ListFragment class
         //example if(position == 0){code here} // this would select the first item in the parent recycler in this case containing our cuban cigar information
-
+        //below for recycler id 1
         if (categoryItemList.get(0).getItemId() == 1) {
+            //card 1
             if (holder.getAdapterPosition() == 0) {
                 holder.infoList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
@@ -65,15 +63,16 @@ public class CategoryItemRecyclerAdapter extends RecyclerView.Adapter<CategoryIt
                                 holder.infoImage.setImageResource(R.drawable.aboutcohiba);
                                 break;
                             case 1:
-                                holder.infoImage.setImageResource(R.drawable.cigars);
+                                holder.infoImage.setImageResource(R.drawable.cohibastrength);
                                 break;
                             default:
-                                holder.infoImage.setImageResource(R.drawable.cohiba);
+                                holder.infoImage.setImageResource(R.drawable.money4);
                                 break;
                         }
 
                     }
                 });
+                //card 2
             } else if (holder.getAdapterPosition() == 1) {
                 holder.infoList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
@@ -86,14 +85,36 @@ public class CategoryItemRecyclerAdapter extends RecyclerView.Adapter<CategoryIt
                                 holder.infoImage.setImageResource(R.drawable.giphy);
                                 break;
                             default:
-                                holder.infoImage.setImageResource(R.drawable.cohiba);
+                                holder.infoImage.setImageResource(R.drawable.money3);
                                 break;
                         }
 
                     }
                 });
+                //card 3
+            }else if (holder.getAdapterPosition() == 2) {
+                holder.infoList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        switch (position) {
+                            case 0:
+                                holder.infoImage.setImageResource(R.drawable.aboutbolivar);
+                                break;
+                            case 1:
+                                holder.infoImage.setImageResource(R.drawable.giphy);
+                                break;
+                            default:
+                                holder.infoImage.setImageResource(R.drawable.money2);
+                                break;
+                        }
+
+                    }
+                });
+                //card 4
             }
+            //below for recycler 2
         }else if (categoryItemList.get(0).getItemId() == 2){
+            //card 1
             if (holder.getAdapterPosition() == 0) {
                 holder.infoList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
@@ -112,6 +133,7 @@ public class CategoryItemRecyclerAdapter extends RecyclerView.Adapter<CategoryIt
 
                     }
                 });
+                //card 2
             } else if (holder.getAdapterPosition() == 1) {
                 holder.infoList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
@@ -130,6 +152,7 @@ public class CategoryItemRecyclerAdapter extends RecyclerView.Adapter<CategoryIt
 
                     }
                 });
+                //card 3
             }
         }
 
