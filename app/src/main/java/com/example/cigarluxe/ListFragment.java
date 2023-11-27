@@ -86,21 +86,11 @@ public class ListFragment extends Fragment {
 
         //creating the listview adapters
         ArrayAdapter<String> adapter1 = new ArrayAdapter<>(getContext(), R.layout.lv_layout,R.id.lvText, cigList);
-        ArrayAdapter<String> adapter2 = new ArrayAdapter<>(getContext(), R.layout.lv_layout,R.id.lvText, cigList);
-        ArrayAdapter<String> adapter3 = new ArrayAdapter<>(getContext(), R.layout.lv_layout,R.id.lvText, cigList);
-        ArrayAdapter<String> adapter4 = new ArrayAdapter<>(getContext(), R.layout.lv_layout,R.id.lvText, cigList);
-        ArrayAdapter<String> adapter5 = new ArrayAdapter<>(getContext(), R.layout.lv_layout,R.id.lvText, cigList);
 
-        //was going to do multiple adapters for different recycler cards changed my mind
-//        ArrayAdapter<String> adapter2 = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, scienceList);
-//        ArrayAdapter<String> adapter3 = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, fruitList);
-//        ArrayAdapter<String> adapter4 = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, fruitList);
-//        ArrayAdapter<String> adapter5 = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, fruitList);
-//        ArrayAdapter<String> adapter6 = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, fruitList);
-//        ArrayAdapter<String> adapter7 = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, fruitList);
-//        ArrayAdapter<String> adapter8 = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, fruitList);
-//        ArrayAdapter<String> adapter9 = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, fruitList);
-//        ArrayAdapter<String> adapter10 = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, fruitList);
+
+
+
+
 
         // added in first category
         List<CategoryItem> categoryItemList = new ArrayList<>();
@@ -112,19 +102,19 @@ public class ListFragment extends Fragment {
 
 // Added in second category
         List<CategoryItem> categoryItemList2 = new ArrayList<>();
-        categoryItemList2.add(new CategoryItem(2, R.drawable.opus, R.drawable.aboutopus, "Opus X", adapter2));
-        categoryItemList2.add(new CategoryItem(2, R.drawable.davidoff, R.drawable.aboutdavidoff, "Millennium", adapter2));
-        categoryItemList2.add(new CategoryItem(2, R.drawable.ligero, R.drawable.aboutflor, "Ligero", adapter2));
-        categoryItemList2.add(new CategoryItem(2, R.drawable.ashton, R.drawable.aboutashton, "Ashton", adapter2));
-        categoryItemList2.add(new CategoryItem(2, R.drawable.romeo, R.drawable.aboutromeo, "Romeo", adapter2));
+        categoryItemList2.add(new CategoryItem(2, R.drawable.opus, R.drawable.aboutopus, "Opus X", adapter1));
+        categoryItemList2.add(new CategoryItem(2, R.drawable.davidoff, R.drawable.aboutdavidoff, "Millennium", adapter1));
+        categoryItemList2.add(new CategoryItem(2, R.drawable.ligero, R.drawable.aboutflor, "Ligero", adapter1));
+        categoryItemList2.add(new CategoryItem(2, R.drawable.ashton, R.drawable.aboutashton, "Ashton", adapter1));
+        categoryItemList2.add(new CategoryItem(2, R.drawable.romeo, R.drawable.aboutromeo, "Romeo", adapter1));
 
 // Added in third category
         List<CategoryItem> categoryItemList3 = new ArrayList<>();
-        categoryItemList3.add(new CategoryItem(3, R.drawable.cao, R.drawable.aboutcao, "CAO", adapter3));
-        categoryItemList3.add(new CategoryItem(3, R.drawable.alec, R.drawable.aboutalec, "Bradley", adapter3));
-        categoryItemList3.add(new CategoryItem(3, R.drawable.villiger, R.drawable.aboutvilliger, "Villiger", adapter3));
-        categoryItemList3.add(new CategoryItem(3, R.drawable.kristoff, R.drawable.aboutkristoff, "Kristoff", adapter3));
-        categoryItemList3.add(new CategoryItem(3, R.drawable.nub, R.drawable.aboutnub, "Nub", adapter3));
+        categoryItemList3.add(new CategoryItem(3, R.drawable.cao, R.drawable.aboutcao, "CAO", adapter1));
+        categoryItemList3.add(new CategoryItem(3, R.drawable.alec, R.drawable.aboutalec, "Bradley", adapter1));
+        categoryItemList3.add(new CategoryItem(3, R.drawable.villiger, R.drawable.aboutvilliger, "Villiger", adapter1));
+        categoryItemList3.add(new CategoryItem(3, R.drawable.kristoff, R.drawable.aboutkristoff, "Kristoff", adapter1));
+        categoryItemList3.add(new CategoryItem(3, R.drawable.nub, R.drawable.aboutnub, "Nub", adapter1));
 
 
 

@@ -9,7 +9,7 @@
 
     <string name="menu_home">Home</string>
     <string name="menu_tutorial">Tutorial</string>
-    <string name="menu_quiz">Cigar Picker</string>
+    <string name="menu_quiz">Cigar Quiz</string>
     <string name="menu_picker">Random Picker</string>
     <string name="menu_list">Cigar Info</string>
     <string name="menu_chat">Cigar AI</string>

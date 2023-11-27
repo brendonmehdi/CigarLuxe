@@ -1,5 +1,7 @@
 package com.example.cigarluxe;
 
+import android.app.AlertDialog;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +9,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+
+import com.example.cigarluxe.model.QuestionAnswer;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +20,17 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class QuizFragment extends Fragment {
+    TextView totalQuestionsTextView;
+    TextView questionTextView;
+    Button ansA, ansB, ansC;
+
+    Button submitBtn;
+    int totalQuestions;
+    int currentQuestionIndex = 0;
+    String selectedAnswer = "";
+    String strength = "";
+    String flavour = "";
+    String cost = "";
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -57,8 +74,104 @@ public class QuizFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+                             Bundle savedInstanceState){
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_quiz, container, false);
+        View view = inflater.inflate(R.layout.fragment_quiz, container, false);
+        totalQuestionsTextView = view.findViewById(R.id.total_question);
+        questionTextView = view.findViewById(R.id.question);
+        ansA = view.findViewById(R.id.ans_A);
+        ansB = view.findViewById(R.id.ans_B);
+        ansC = view.findViewById(R.id.ans_C);
+
+        submitBtn = view.findViewById(R.id.submit_btn);
+        totalQuestions = QuestionAnswer.questions.length;
+
+
+        totalQuestionsTextView.setText("Total Questions: " + totalQuestions);
+
+        ansA.setOnClickListener(this::onClick);
+        ansB.setOnClickListener(this::onClick);
+        ansC.setOnClickListener(this::onClick);
+        submitBtn.setOnClickListener(this::onClick);
+
+        loadNewQuestion();
+
+
+
+
+
+        return view;
     }
+
+    private void onClick(View view) {
+
+        ansA.setBackgroundColor(Color.WHITE);
+        ansB.setBackgroundColor(Color.WHITE);
+        ansC.setBackgroundColor(Color.WHITE);
+
+        Button clickedButton = (Button) view;
+        if (clickedButton.getId() == R.id.submit_btn){
+            currentQuestionIndex++;
+            loadNewQuestion();
+
+        }else{
+            selectedAnswer = clickedButton.getText().toString();
+
+            if(currentQuestionIndex == 0){
+                strength = selectedAnswer;
+            }else if(currentQuestionIndex == 1){
+                flavour = selectedAnswer;
+            }else if(currentQuestionIndex == 2){
+                cost = selectedAnswer;
+            }
+            clickedButton.setBackgroundColor(Color.LTGRAY);
+        }
+    }
+
+    void loadNewQuestion(){
+        if (currentQuestionIndex == totalQuestions){
+            finishQuiz();
+            return;
+        }
+
+        questionTextView.setText(QuestionAnswer.questions[currentQuestionIndex]);
+        ansA.setText(QuestionAnswer.choices[currentQuestionIndex][0]);
+        ansB.setText(QuestionAnswer.choices[currentQuestionIndex][1]);
+        ansC.setText(QuestionAnswer.choices[currentQuestionIndex][2]);
+    }
+
+
+    void finishQuiz() {
+        String suggestionType = getSuggestionType();
+
+        // Display suggestion or perform any other actions based on the suggestionType
+        displaySuggestion(suggestionType);
+    }
+
+    String getSuggestionType() {
+
+        if (strength.equals("C. Full-bodied") && flavour.equals("C. Earthy and Robust") && cost.equals("C. Premium")) {
+            return "Cuban";
+        } else if (strength.equals("B. Medium") && flavour.equals("A. Sweet and Nutty") && cost.equals("B. Mid-range")) {
+            return "Dominican";
+        } else {
+            return "Brazilian";
+        }
+    }
+
+
+
+    void displaySuggestion(String suggestionType) {
+        String suggestionMessage = "Based on your preferences, we suggest trying " + suggestionType + " cigars.";
+        new AlertDialog.Builder(getActivity())
+                .setTitle("Cigar Suggestion")
+                .setMessage(suggestionMessage)
+                .setPositiveButton("OK", (dialog, which) -> {
+                    currentQuestionIndex = 0;
+                    loadNewQuestion();
+                })
+                .show();
+    }
+
+
 }
