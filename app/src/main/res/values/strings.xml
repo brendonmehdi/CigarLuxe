@@ -19,4 +19,5 @@
 
 <!--    cigar generator text-->
     <string name="picker_title">Cigar Generator</string>
+    <string name="picker_button">Click Me!</string>
 </resources>

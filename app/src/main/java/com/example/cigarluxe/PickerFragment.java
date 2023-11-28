@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import java.util.Random;
  * create an instance of this fragment.
  */
 public class PickerFragment extends Fragment {
+    ImageView ranImage;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -64,55 +66,74 @@ public class PickerFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_picker, container, false);
-        ImageView ranImage = view.findViewById(R.id.ranImage);
+        ranImage = view.findViewById(R.id.ranImage);
         Button ranButton = view.findViewById(R.id.randButton);
 
         Random ran = new Random();
+        //handler to handle delaying images
+        Handler handler = new Handler();
 
         ranButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int ranNum = ran.nextInt(10);
 
-                switch (ranNum){
-                    case 0:
-                        ranImage.setImageResource(R.drawable.cohiba);
-                        break;
-                    case 1:
-                        ranImage.setImageResource(R.drawable.monte);
-                        break;
-                    case 2:
-                        ranImage.setImageResource(R.drawable.davidoff);
-                        break;
-                    case 3:
-                        ranImage.setImageResource(R.drawable.cao);
-                        break;
-                    case 4:
-                        ranImage.setImageResource(R.drawable.upman);
-                        break;
-                    case 5:
-                        ranImage.setImageResource(R.drawable.nub);
-                        break;
-                    case 6:
-                        ranImage.setImageResource(R.drawable.ashton);
-                        break;
-                    case 7:
-                        ranImage.setImageResource(R.drawable.bolivar);
-                        break;
-                    case 8:
-                        ranImage.setImageResource(R.drawable.villiger);
-                        break;
-                    case 9:
-                        ranImage.setImageResource(R.drawable.alec);
-                        break;
+                int numberOfImages = 8;
 
+                for (int i = 0; i < numberOfImages; i++) {
+                    // Delay each image change by a certain interval
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        //run holds code you want to execute after a certain delay
+                        //in this case we generate a random number we do this 8 times and then we
+                        //call the updateimage method we made
+                        public void run() {
+                            int ranNum = ran.nextInt(10);
+                            updateImageView(ranNum);
+                        }
+                    }, i * 200);//this is the second param which is the delay that is
+                    //calculated based on the iteration index 'i' and a delay interval
                 }
+
 //                System.out.println(ranNum);
             }
         });
 
-
-
         return view;
+    }
+
+    private void updateImageView(int number){
+        switch (number){
+            case 0:
+                ranImage.setImageResource(R.drawable.cohiba);
+                break;
+            case 1:
+                ranImage.setImageResource(R.drawable.monte);
+                break;
+            case 2:
+                ranImage.setImageResource(R.drawable.davidoff);
+                break;
+            case 3:
+                ranImage.setImageResource(R.drawable.cao);
+                break;
+            case 4:
+                ranImage.setImageResource(R.drawable.upman);
+                break;
+            case 5:
+                ranImage.setImageResource(R.drawable.nub);
+                break;
+            case 6:
+                ranImage.setImageResource(R.drawable.ashton);
+                break;
+            case 7:
+                ranImage.setImageResource(R.drawable.bolivar);
+                break;
+            case 8:
+                ranImage.setImageResource(R.drawable.villiger);
+                break;
+            case 9:
+                ranImage.setImageResource(R.drawable.alec);
+                break;
+
+        }
     }
 }
