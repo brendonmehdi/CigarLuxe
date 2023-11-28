@@ -1,5 +1,6 @@
 package com.example.cigarluxe;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -81,6 +82,7 @@ public class PickerFragment extends Fragment {
 
                 for (int i = 0; i < numberOfImages; i++) {
                     // Delay each image change by a certain interval
+                    int finalI = i;
                     handler.postDelayed(new Runnable() {
                         @Override
                         //run holds code you want to execute after a certain delay
@@ -89,12 +91,18 @@ public class PickerFragment extends Fragment {
                         public void run() {
                             int ranNum = ran.nextInt(10);
                             updateImageView(ranNum);
+
+                            if (finalI == numberOfImages -1){
+                                popup(ranNum);
+                            }
                         }
                     }, i * 200);//this is the second param which is the delay that is
                     //calculated based on the iteration index 'i' and a delay interval
                 }
 
 //                System.out.println(ranNum);
+
+
             }
         });
 
@@ -102,6 +110,7 @@ public class PickerFragment extends Fragment {
     }
 
     private void updateImageView(int number){
+        String suggestionMessage;
         switch (number){
             case 0:
                 ranImage.setImageResource(R.drawable.cohiba);
@@ -133,7 +142,111 @@ public class PickerFragment extends Fragment {
             case 9:
                 ranImage.setImageResource(R.drawable.alec);
                 break;
+        }
+    }
+
+    public void popup(int number){
+        String suggestionMessage;
+        switch (number){
+            case 0:
+
+                //alert box
+                suggestionMessage = "CONGRATS YOUR LUCKY PICK IS COHIBA!";
+                new AlertDialog.Builder(getActivity())
+                        .setTitle("Cigar Picker")
+                        .setMessage(suggestionMessage)
+                        .setPositiveButton("OK", null)
+                        .show();
+
+                break;
+            case 1:
+
+                //alert box
+                suggestionMessage = "CONGRATS YOUR LUCKY PICK IS MONTECRISTO!";
+                new AlertDialog.Builder(getActivity())
+                        .setTitle("Cigar Picker")
+                        .setMessage(suggestionMessage)
+                        .setPositiveButton("OK", null)
+                        .show();
+                break;
+            case 2:
+
+                //alert box
+                suggestionMessage = "CONGRATS YOUR LUCKY PICK IS DAVIDOFF MILLENNIUM!";
+                new AlertDialog.Builder(getActivity())
+                        .setTitle("Cigar Picker")
+                        .setMessage(suggestionMessage)
+                        .setPositiveButton("OK", null)
+                        .show();
+                break;
+            case 3:
+
+                //alert box
+                suggestionMessage = "CONGRATS YOUR LUCKY PICK IS CAO BRAZILLA GOL!";
+                new AlertDialog.Builder(getActivity())
+                        .setTitle("Cigar Picker")
+                        .setMessage(suggestionMessage)
+                        .setPositiveButton("OK", null)
+                        .show();
+                break;
+            case 4:
+
+                //alert box
+                suggestionMessage = "CONGRATS YOUR LUCKY PICK IS H.UPMANN!";
+                new AlertDialog.Builder(getActivity())
+                        .setTitle("Cigar Picker")
+                        .setMessage(suggestionMessage)
+                        .setPositiveButton("OK", null)
+                        .show();
+                break;
+            case 5:
+
+                //alert box
+                suggestionMessage = "CONGRATS YOUR LUCKY PICK IS NUB!";
+                new AlertDialog.Builder(getActivity())
+                        .setTitle("Cigar Picker")
+                        .setMessage(suggestionMessage)
+                        .setPositiveButton("OK", null)
+                        .show();
+                break;
+            case 6:
+                //alert box
+                suggestionMessage = "CONGRATS YOUR LUCKY PICK IS ASHTON VSG!";
+                new AlertDialog.Builder(getActivity())
+                        .setTitle("Cigar Picker")
+                        .setMessage(suggestionMessage)
+                        .setPositiveButton("OK", null)
+                        .show();
+                break;
+            case 7:
+                //alert box
+                suggestionMessage = "CONGRATS YOUR LUCKY PICK IS BOLIVAR!";
+                new AlertDialog.Builder(getActivity())
+                        .setTitle("Cigar Picker")
+                        .setMessage(suggestionMessage)
+                        .setPositiveButton("OK", null)
+                        .show();
+                break;
+            case 8:
+                //alert box
+                suggestionMessage = "CONGRATS YOUR LUCKY PICK IS VILLIGER!";
+                new AlertDialog.Builder(getActivity())
+                        .setTitle("Cigar Picker")
+                        .setMessage(suggestionMessage)
+                        .setPositiveButton("OK", null)
+                        .show();
+                break;
+            case 9:
+                //alert box
+                suggestionMessage = "CONGRATS YOUR LUCKY PICK IS ALEC BRADLEY!";
+                new AlertDialog.Builder(getActivity())
+                        .setTitle("Cigar Picker")
+                        .setMessage(suggestionMessage)
+                        .setPositiveButton("OK", null)
+                        .show();
+                break;
 
         }
+
     }
 }
