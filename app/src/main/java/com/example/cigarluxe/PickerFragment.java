@@ -77,27 +77,37 @@ public class PickerFragment extends Fragment {
                 switch (ranNum){
                     case 0:
                         ranImage.setImageResource(R.drawable.cohiba);
+                        break;
                     case 1:
                         ranImage.setImageResource(R.drawable.monte);
+                        break;
                     case 2:
                         ranImage.setImageResource(R.drawable.davidoff);
+                        break;
                     case 3:
                         ranImage.setImageResource(R.drawable.cao);
+                        break;
                     case 4:
                         ranImage.setImageResource(R.drawable.upman);
+                        break;
                     case 5:
                         ranImage.setImageResource(R.drawable.nub);
+                        break;
                     case 6:
                         ranImage.setImageResource(R.drawable.ashton);
+                        break;
                     case 7:
                         ranImage.setImageResource(R.drawable.bolivar);
+                        break;
                     case 8:
                         ranImage.setImageResource(R.drawable.villiger);
+                        break;
                     case 9:
                         ranImage.setImageResource(R.drawable.alec);
+                        break;
 
                 }
-                System.out.println(ranNum);
+//                System.out.println(ranNum);
             }
         });
 
