@@ -6,11 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".PickerFragment">
 
+    <ImageView
+        android:id="@+id/ranImage"
+        android:layout_width="355dp"
+        android:layout_height="320dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/randButton"
+        android:layout_width="270dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="68dp"
+        android:text="Cllick Me!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ranImage" />
+
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Place holder text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        android:layout_marginBottom="28dp"
+        android:fontFamily="serif"
+        android:text="@string/picker_title"
+        android:textAlignment="center"
+        android:textColor="@color/cigarBlack"
+        android:textSize="@dimen/text_title"
+        android:textStyle="bold|italic"
+        android:typeface="serif"
+        app:layout_constraintBottom_toTopOf="@+id/ranImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

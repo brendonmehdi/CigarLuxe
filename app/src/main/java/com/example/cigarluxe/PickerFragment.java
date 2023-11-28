@@ -7,6 +7,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+
+import java.util.Random;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +63,46 @@ public class PickerFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_picker, container, false);
+        View view = inflater.inflate(R.layout.fragment_picker, container, false);
+        ImageView ranImage = view.findViewById(R.id.ranImage);
+        Button ranButton = view.findViewById(R.id.randButton);
+
+        Random ran = new Random();
+
+        ranButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int ranNum = ran.nextInt(10);
+
+                switch (ranNum){
+                    case 0:
+                        ranImage.setImageResource(R.drawable.cohiba);
+                    case 1:
+                        ranImage.setImageResource(R.drawable.monte);
+                    case 2:
+                        ranImage.setImageResource(R.drawable.davidoff);
+                    case 3:
+                        ranImage.setImageResource(R.drawable.cao);
+                    case 4:
+                        ranImage.setImageResource(R.drawable.upman);
+                    case 5:
+                        ranImage.setImageResource(R.drawable.nub);
+                    case 6:
+                        ranImage.setImageResource(R.drawable.ashton);
+                    case 7:
+                        ranImage.setImageResource(R.drawable.bolivar);
+                    case 8:
+                        ranImage.setImageResource(R.drawable.villiger);
+                    case 9:
+                        ranImage.setImageResource(R.drawable.alec);
+
+                }
+                System.out.println(ranNum);
+            }
+        });
+
+
+
+        return view;
     }
 }
