@@ -17,10 +17,12 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
-<!--    cigar generator text-->
+    <!--    cigar generator text-->
     <string name="picker_title">Cigar Generator</string>
     <string name="picker_button">Click Me!</string>
 
-<!--    tutorial text -->
+    <!--    tutorial text -->
     <string name="tutorial_title">Cigar Tips</string>
+    <string name="cigar_tip">Enjoying a Cigar: Take your time and savor the experience. Cut the cigar properly, light it evenly, and puff gently. Relax and appreciate the flavors, aroma, and craftsmanship.</string>
+
 </resources>
