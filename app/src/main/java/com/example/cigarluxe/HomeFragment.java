@@ -1,6 +1,9 @@
 package com.example.cigarluxe;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,6 +13,7 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 /**
@@ -66,7 +70,28 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
 
+        Button mapbtn = view.findViewById(R.id.mapIntent);
+//intent shows nearby cigar shops
+        mapbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Specify the search term
+                String searchTerm = "cigar shop";
+
+                // Create a Uri with the search term
+                Uri IntentUri = Uri.parse("geo:0,0?q=" + Uri.encode(searchTerm));
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, IntentUri);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                startActivity(mapIntent);
+
+            }
+        });
+
+
+
+
 
         return view;
     }
+
 }
