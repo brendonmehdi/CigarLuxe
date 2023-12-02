@@ -105,7 +105,6 @@ public class ListFragment extends Fragment {
             adapter1 = new ArrayAdapter<>(getContext(), R.layout.lv_layout,R.id.lvText, cigList);
         }
 
-
 //below is settings for the text title
         boolean textSetting = sp.getBoolean("textSettings", false);
         TextView recyclerTitle = view.findViewById(R.id.recyclerTitle);

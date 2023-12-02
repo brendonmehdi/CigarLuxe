@@ -1,9 +1,11 @@
 package com.example.cigarluxe;
 
 import android.app.AlertDialog;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.preference.PreferenceManager;
 
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -11,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.Random;
 
@@ -67,12 +70,32 @@ public class PickerFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_picker, container, false);
+
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getContext());
+//below is settings for the text title
+        boolean textSetting = sp.getBoolean("textSettings", false);
+        TextView recyclerTitle = view.findViewById(R.id.genTitle);
+
+        if (textSetting) {
+            recyclerTitle.setTextSize(getResources().getDimension(R.dimen.text_bigger));
+
+        } else {
+            recyclerTitle.setTextSize(getResources().getDimension(R.dimen.text_norm));
+
+        }
+
+
         ranImage = view.findViewById(R.id.ranImage);
         Button ranButton = view.findViewById(R.id.randButton);
+
+
+
 
         Random ran = new Random();
         //handler to handle delaying images
         Handler handler = new Handler();
+
+
 
         ranButton.setOnClickListener(new View.OnClickListener() {
             @Override

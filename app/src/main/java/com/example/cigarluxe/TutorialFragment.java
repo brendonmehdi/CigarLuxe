@@ -1,13 +1,16 @@
 package com.example.cigarluxe;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.preference.PreferenceManager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.cigarluxe.adapter.VPAdapter;
 
@@ -63,6 +66,19 @@ public class TutorialFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_tutorial, container, false);
+
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getContext());
+//below is settings for the text title
+        boolean textSetting = sp.getBoolean("textSettings", false);
+        TextView recyclerTitle = view.findViewById(R.id.tutTitle);
+
+        if (textSetting) {
+            recyclerTitle.setTextSize(getResources().getDimension(R.dimen.text_bigger));
+
+        } else {
+            recyclerTitle.setTextSize(getResources().getDimension(R.dimen.text_norm));
+
+        }
 
         viewPager2 = view.findViewById(R.id.tutPager);
         viewPager2.setAdapter(new VPAdapter(getActivity()));
