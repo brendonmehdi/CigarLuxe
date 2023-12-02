@@ -1,16 +1,22 @@
 package com.example.cigarluxe;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.preference.PreferenceManager;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.GridLayout;
+import android.widget.TextView;
 
 import com.example.cigarluxe.adapter.MainRecyclerAdapter;
 import com.example.cigarluxe.model.AllCategory;
@@ -83,11 +89,34 @@ public class ListFragment extends Fragment {
 
         //here we will create the adapters for the listview
         String cigList[] = {"About", "Strength", "Cost"};
-
         //creating the listview adapters
-        ArrayAdapter<String> adapter1 = new ArrayAdapter<>(getContext(), R.layout.lv_layout,R.id.lvText, cigList);
+        ArrayAdapter<String> adapter1;
+        //below is the shard pref for the settings menu in order to acces the settings
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getContext());
+
+//below is the boolean for the list settings
+        boolean listSettings = sp.getBoolean("listSettings", false);
 
 
+
+        if (listSettings){
+            adapter1 = new ArrayAdapter<>(getContext(), R.layout.lv_layout2,R.id.lvText2, cigList);
+        }else{
+            adapter1 = new ArrayAdapter<>(getContext(), R.layout.lv_layout,R.id.lvText, cigList);
+        }
+
+
+//below is settings for the text title
+        boolean textSetting = sp.getBoolean("textSettings", false);
+        TextView recyclerTitle = view.findViewById(R.id.recyclerTitle);
+
+        if (textSetting) {
+            recyclerTitle.setTextSize(getResources().getDimension(R.dimen.text_bigger));
+
+        } else {
+            recyclerTitle.setTextSize(getResources().getDimension(R.dimen.text_norm));
+
+        }
 
 
 
@@ -126,7 +155,12 @@ public class ListFragment extends Fragment {
 
 
         mainCategoryRecycler = view.findViewById(R.id.main_recycler);
+
+
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
+
+
+
         mainCategoryRecycler.setLayoutManager(layoutManager);
         mainRecyclerAdapter = new MainRecyclerAdapter(getContext(), allCategoryList);
         mainCategoryRecycler.setAdapter(mainRecyclerAdapter);
