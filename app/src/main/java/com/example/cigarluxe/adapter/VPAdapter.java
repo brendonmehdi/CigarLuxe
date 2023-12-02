@@ -23,7 +23,7 @@ public class VPAdapter extends FragmentStateAdapter {
             case 2: return VpLayout.newInstance(R.drawable.lightcigar, "3. Light the Cigar", "without letting the flame touch the cigar puff a few times");
             case 3: return VpLayout.newInstance(R.drawable.evenlylit, "4. Make sure its evenly lit", "look at the foot of the cigar and lightly blow on it to ensure its evenly lit");
             case 4: return VpLayout.newInstance(R.drawable.cigarpagerenjoy, "5. Smoke and Enjoy", "Smoke without inhaling and puff every 30 - 60 sec");
-            default: return VpLayout.newInstance(R.drawable.aboutcohiba, "404: Fragment not found", "hi");
+            default: return VpLayout.newInstance(R.drawable.aboutcohiba, "404", "not found");
         }
     }
 
