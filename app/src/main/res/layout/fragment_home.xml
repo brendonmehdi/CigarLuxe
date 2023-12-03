@@ -1,4 +1,5 @@
 <androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -47,10 +48,22 @@
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
         android:text="Map"
-        app:buttonColor="@color/fbutton_color_amethyst"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/gifImageView" />
+
+
+    <info.hoang8f.widget.FButton
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="8dp"
+        android:text="call"
+        app:layout_constraintStart_toEndOf="@+id/mapIntent"
+        app:layout_constraintTop_toBottomOf="@id/gifImageView" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
