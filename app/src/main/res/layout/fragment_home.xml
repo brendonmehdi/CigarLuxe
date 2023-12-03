@@ -31,6 +31,7 @@
         android:id="@+id/imageView3"
         android:layout_width="410dp"
         android:layout_height="416dp"
+        android:layout_marginTop="60dp"
         android:rotation="180"
         android:src="@drawable/singlecigar"
         app:layout_constraintEnd_toEndOf="parent"
