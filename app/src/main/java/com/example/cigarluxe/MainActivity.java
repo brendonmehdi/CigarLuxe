@@ -32,8 +32,11 @@ public class MainActivity extends AppCompatActivity {
         binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                try {
+                    Navigation.findNavController(MainActivity.this, R.id.nav_host_fragment_content_main).navigate(R.id.settingsFragment);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
         DrawerLayout drawer = binding.drawerLayout;
