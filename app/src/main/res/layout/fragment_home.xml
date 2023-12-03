@@ -48,6 +48,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
         android:text="Map"
+        fbutton:buttonColor="@color/fbutton_color_silver"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,15 +56,27 @@
 
 
     <info.hoang8f.widget.FButton
+        android:id="@+id/callIntent"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="8dp"
+        fbutton:buttonColor="@color/fbutton_color_silver"
         android:text="call"
         app:layout_constraintStart_toEndOf="@+id/mapIntent"
         app:layout_constraintTop_toBottomOf="@id/gifImageView" />
 
 
+    <info.hoang8f.widget.FButton
+        android:id="@+id/emailIntent"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="8dp"
+        fbutton:buttonColor="@color/fbutton_color_silver"
+        android:text="email"
+        fbutton:layout_constraintStart_toEndOf="@+id/callIntent"
+        fbutton:layout_constraintTop_toBottomOf="@+id/gifImageView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

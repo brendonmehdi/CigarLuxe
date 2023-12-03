@@ -1,4 +1,5 @@
 <androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -47,10 +48,12 @@
         android:layout_height="100dp"
         android:layout_marginBottom="36dp"
         android:text="Map"
-        app:buttonColor="@color/fbutton_color_concrete"
+        fbutton:buttonColor="@color/fbutton_color_silver"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="parent" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
