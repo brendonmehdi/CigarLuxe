@@ -8,13 +8,25 @@
 
     <ImageView
         android:id="@+id/ranImage"
-        android:layout_width="355dp"
-        android:layout_height="320dp"
+        android:layout_width="527dp"
+        android:layout_height="468dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@tools:sample/avatars" />
+
+<!--    <Button-->
+<!--        android:id="@+id/randButton"-->
+<!--        android:layout_width="453dp"-->
+<!--        android:layout_height="129dp"-->
+<!--        android:layout_marginTop="68dp"-->
+<!--        android:text="@string/picker_button"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.492"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/ranImage" />-->
+
 
     <info.hoang8f.widget.FButton
         android:id="@+id/randButton"
@@ -30,18 +42,19 @@
 
     <TextView
         android:id="@+id/genTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="451dp"
+        android:layout_height="200dp"
         android:layout_marginBottom="28dp"
         android:fontFamily="serif"
         android:text="@string/picker_title"
         android:textAlignment="center"
         android:textColor="@color/cigarBlack"
-        android:textSize="@dimen/text_title"
+        android:textSize="@dimen/tabTitle"
         android:textStyle="bold|italic"
         android:typeface="serif"
         app:layout_constraintBottom_toTopOf="@+id/ranImage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -41,4 +41,10 @@
     <string name="pref_text">Text Settings</string>
 
 
+
+<!--    homepage-->
+    <string name="homedesc">Discover the Art of Cigars with CigarLuxe, your go-to source for all things cigars.
+        Immerse yourself in the world of premium tobacco, rich flavors, and expert craftsmanship. Whether you\'re a seasoned aficionado
+        or a curious beginner, CigarLuxe is here to elevate your cigar experience.</string>
+
 </resources>
