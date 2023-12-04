@@ -7,12 +7,14 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
+<!--    menu strings-->
     <string name="menu_home">Home</string>
     <string name="menu_tutorial">Tutorial</string>
     <string name="menu_quiz">Cigar Quiz</string>
     <string name="menu_picker">Random Picker</string>
     <string name="menu_list">Cigar Info</string>
     <string name="menu_chat">Cigar AI</string>
+    <string name="menu_credits">Credits</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
@@ -41,8 +43,7 @@
     <string name="pref_text">Text Settings</string>
 
 
-
-<!--    homepage-->
+    <!--    homepage-->
     <string name="homedesc">Discover the Art of Cigars with CigarLuxe, your go-to source for all things cigars.
         Immerse yourself in the world of premium tobacco, rich flavors, and expert craftsmanship. Whether you\'re a seasoned aficionado
         or a curious beginner, CigarLuxe is here to elevate your cigar experience.</string>
