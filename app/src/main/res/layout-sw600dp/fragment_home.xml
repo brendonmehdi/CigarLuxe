@@ -42,18 +42,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <info.hoang8f.widget.FButton
         android:id="@+id/mapIntent"
-        android:layout_width="381dp"
-        android:layout_height="100dp"
-        android:layout_marginBottom="36dp"
+        android:layout_width="254dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="40dp"
         android:text="Map"
         fbutton:buttonColor="@color/fbutton_color_silver"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.066"
-        app:layout_constraintStart_toStartOf="parent" />
+        fbutton:layout_constraintBottom_toBottomOf="parent"
+        fbutton:layout_constraintStart_toStartOf="parent" />
 
+    <info.hoang8f.widget.FButton
+        android:id="@+id/callIntent"
+        android:layout_width="254dp"
+        android:layout_height="77dp"
+        android:layout_marginBottom="40dp"
+        android:text="call"
+        fbutton:buttonColor="@color/fbutton_color_silver"
+        fbutton:layout_constraintBottom_toBottomOf="parent"
+        fbutton:layout_constraintEnd_toEndOf="parent" />
+
+    <info.hoang8f.widget.FButton
+        android:id="@+id/emailIntent"
+        android:layout_width="254dp"
+        android:layout_height="77dp"
+        android:layout_marginBottom="40dp"
+        android:text="email"
+        fbutton:buttonColor="@color/fbutton_color_silver"
+        fbutton:layout_constraintBottom_toBottomOf="parent"
+        fbutton:layout_constraintEnd_toEndOf="@+id/callIntent"
+        fbutton:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

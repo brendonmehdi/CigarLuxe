@@ -1,9 +1,11 @@
 package com.example.cigarluxe;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -17,6 +19,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import info.hoang8f.widget.FButton;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -72,7 +77,15 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
 
-        Button mapbtn = view.findViewById(R.id.mapIntent);
+        FButton mapbtn = view.findViewById(R.id.mapIntent);
+        FButton emailbtn = view.findViewById(R.id.emailIntent);
+        FButton callbtn = view.findViewById(R.id.callIntent);
+        mapbtn.setButtonColor(getResources().getColor(R.color.fbutton_color_silver));
+        emailbtn.setButtonColor(getResources().getColor(R.color.fbutton_color_silver));
+        callbtn.setButtonColor(getResources().getColor(R.color.fbutton_color_silver));
+
+
+
 //intent shows nearby cigar shops
         mapbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,7 +102,36 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        emailbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("message/rfc822");
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"cigarluxe@luxe.com"}); // replace with the actual email address
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Subject");
+                intent.putExtra(Intent.EXTRA_TEXT, "Body of the email");
+                try {
+                    startActivity(Intent.createChooser(intent, "Send Email"));
+                } catch (ActivityNotFoundException e) {
+                    // Handle case where no email app is available
+                    Toast.makeText(getContext(), "No email app installed", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
+        callbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:" + "1234567890")); // replace with the actual phone number
+                try {
+                    startActivity(intent);
+                } catch (ActivityNotFoundException e) {
+                    // Handle case where no dialer app is available
+                    Toast.makeText(getContext(), "No dialer app installed", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
 
 

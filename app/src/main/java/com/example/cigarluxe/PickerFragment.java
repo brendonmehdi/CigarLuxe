@@ -17,6 +17,8 @@ import android.widget.TextView;
 
 import java.util.Random;
 
+import info.hoang8f.widget.FButton;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link PickerFragment#newInstance} factory method to
@@ -86,8 +88,8 @@ public class PickerFragment extends Fragment {
 
 
         ranImage = view.findViewById(R.id.ranImage);
-        Button ranButton = view.findViewById(R.id.randButton);
-
+        FButton ranButton = view.findViewById(R.id.randButton);
+        ranButton.setButtonColor(getResources().getColor(R.color.fbutton_color_orange));
 
 
 
